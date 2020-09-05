@@ -10,12 +10,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val button: Button = findViewById(R.id.button)
-        val textView: TextView = findViewById(R.id.textView2)
+        val textView1: TextView = findViewById(R.id.textView2)
+        val textView2: TextView = findViewById(R.id.textView3)
         var loxi =0
         button.setOnClickListener(){
             loxi+=1
-
-            textView.text = loxi.toString()
+            var text1="лох"
+            when (loxi%10){
+                1 -> text1="лох"
+                2,3,4 -> text1="лоха"
+                5,6,7,8,9,0 ->text1="лохов"
+            }
+            textView2.text = text1
+            textView1.text = loxi.toString()
 
         }
     }
