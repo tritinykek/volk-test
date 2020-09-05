@@ -10,11 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val button: Button = findViewById(R.id.button)
-        val textView: TextView = findViewById(R.id.textView)
-        var i =0
+        val textView: TextView = findViewById(R.id.textView2)
+        var loxi =0
         button.setOnClickListener(){
-            i+=1
-            textView.text = "На земле есть " + i.toString() + " лохов"
+            loxi+=1
+
+            textView.text = loxi.toString()
 
         }
     }
