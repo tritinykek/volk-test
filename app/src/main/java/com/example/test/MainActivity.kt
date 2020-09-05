@@ -16,11 +16,17 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener(){
             loxi+=1
             var text1="лох"
-            when (loxi%10){
-                1 -> text1="лох"
-                2,3,4 -> text1="лоха"
-                5,6,7,8,9,0 ->text1="лохов"
+            when (loxi%100){
+                11,12,13,14,15,16,17,18,19 -> text1 = "лохов"
+                else -> {
+                    when (loxi%10){
+                        1 -> text1="лох"
+                        2,3,4 -> text1="лоха"
+                        5,6,7,8,9,0 ->text1="лохов"
+                    }
+                }
             }
+
             textView2.text = text1
             textView1.text = loxi.toString()
 
